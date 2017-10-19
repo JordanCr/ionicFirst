@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {HelloPage} from "../pages/hello/hello";
 import {ListPage} from "../pages/list/list";
 import {ItemDetailsPage} from "../pages/item-details/item-details";
+import {GamePage} from "../pages/game/game";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ItemDetailsPage} from "../pages/item-details/item-details";
     TabsPage,
     HelloPage,
     ListPage,
-    ItemDetailsPage
+    ItemDetailsPage,
+    GamePage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {ItemDetailsPage} from "../pages/item-details/item-details";
     TabsPage,
     HelloPage,
     ListPage,
-    ItemDetailsPage
+    ItemDetailsPage,
+    GamePage
   ],
   providers: [
     StatusBar,
