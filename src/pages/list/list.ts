@@ -22,7 +22,6 @@ export class ListPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    this.selectedItem = navParams.get('item');
 
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
       'american-football', 'boat', 'bluetooth', 'build'];
@@ -34,11 +33,15 @@ export class ListPage {
         note: 'This is item #' + i,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
-      console.log(this.items);
+     // console.log(this.items);
     }
   }
 
-  itemTapped(event, item) {
+
+  itemTapped(item) {
+
+    console.log(item);
+
     this.navCtrl.push(ItemDetailsPage, {
       item: item
     });

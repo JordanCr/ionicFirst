@@ -13,15 +13,31 @@
 </ion-header>
 
 
-<ion-content padding>
-
-  <li *ngFor="let item of items">
+<ion-content class="card-background-page" padding>
 
 
-    <button ion-button>{{item.title}}</button>
 
 
-  </li>
+  <!--  <button ion-button (click)="itemTapped(item)"> {{item.title}} </button> -->
+
+    <ion-grid>
+      <ion-row>
+
+        <div *ngFor="let item of items">
+
+        <ion-col>
+          <ion-card (click)="itemTapped(item)">
+            <img src="../../assets/images/electro.jpg"/>
+            <div class="card-title"> {{item.title}}</div>
+            <div class="card-subtitle">{{item.note}}</div>
+          </ion-card>
+        </ion-col>
+
+
+        </div>
+
+      </ion-row>
+    </ion-grid>
 
 
 </ion-content>

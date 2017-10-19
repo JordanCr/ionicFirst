@@ -15,4 +15,53 @@
 
 <ion-content padding>
 
+  <ion-list>
+    <ion-item>
+      <ion-icon name="ionic" item-start></ion-icon>
+      {{item.title}} - {{item.note}}
+    </ion-item>
+  </ion-list>
+
+
+  <div padding>
+    <ion-segment [(ngModel)]="ItemDetailsPage">
+      <ion-segment-button value="title">
+        Title
+      </ion-segment-button>
+      <ion-segment-button value="note">
+        note
+      </ion-segment-button>
+      <ion-segment-button value="icon">
+        icon
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="ItemDetailsPage">
+    <ion-list *ngSwitchCase="'title'">
+      <ion-item>
+        <ion-thumbnail item-start>
+        </ion-thumbnail>
+        <h2>{{item.title}}</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'note'">
+      <ion-item>
+        <ion-thumbnail item-start>
+        </ion-thumbnail>
+        <h2>{{item.note}}</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'icon'">
+      <ion-item>
+        <ion-thumbnail item-start>
+        </ion-thumbnail>
+        <h2>Icon : <ion-icon name="{{item.icon}}"></ion-icon></h2>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
 </ion-content>
